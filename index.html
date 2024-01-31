@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Architects</title>
+    <style>
+     #nav a {
+        text-decoration: none;
+        text-align: center;
+        font-family: serif;
+        letter-spacing: 2px;
+        color: rgb(14, 12, 12);
+        margin-right: 15px;
+     }
+     #nav {
+        position: fixed;
+        top: 0;
+        width: 100%;
+        height: 50px;
+        background-color: white;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        z-index: 1;
+     }
+     #nav a:first-child {
+      flex-basis: 70%;
+      text-align: left;
+      padding-left: 10px;
+     }
+     #nav a:hover {
+      color: green;
+     }
+     #home {
+      margin-top: 35px;
+     }
+     #home p {
+         position: relative;
+         top: -250px;
+         left: 35%;
+         text-shadow: 0px 1px 3px;
+         color: black;
+         font-size: 36px;
+         letter-spacing: 1px;
+      }
+      #home b {
+         color: white;
+         background-color: black;
+         padding: 5px;
+         box-shadow: 2px 2px 10px grey;
+      }
+      #home img {
+         height: 580px;
+         width: 100%;
+      }
+      hr {
+         opacity: 0.25;
+         width: 95%;
+      }
+      span {
+         position: absolute;
+         background-color: white;
+         border: 1px solid;
+      }
+      #projects img {
+         border: 1px solid;
+         width: 316px;
+         height: 300px;
+         margin-bottom: 10px;
+      }
+      #projects, #about, #contact {
+         margin: 20px;
+      }
+      #about img {
+         width: 273px;
+         height: 300px;
+      }
+      #about div {
+         text-align: center;
+         border: 2px solid whitesmoke;
+         margin: 20px;
+         display: inline-block;
+      }
+      #about div button {
+         color: green;
+         background-color: rgb(231, 231, 79);
+         border: none;
+         width: 100%;
+      }
+      #about div button:hover {
+         color: white;
+         background-color: black;
+      }
+      input {
+         width: 100%;
+         line-height: 20px;
+         margin-bottom: 20px;
+         border-top: 0;
+         border-left: 0;
+         border-right: 0;
+         border-color: grey;
+         border-width: 1px;
+         opacity: 0.5;
+      }
+      #contact div form button {
+         color: white;
+         background-color: black;
+         border: none;
+         height: 30px;
+      }
+      #contact div form button:hover {
+         color: blue;
+         background-color: powderblue;
+      }
+      #footer {
+         width: inherit;
+         text-align: center;
+         background-color: black;
+         color: white;
+         padding: 50px;
+      }
+
+     @media screen and (max-width: 480px) {
+      #nav {
+         width: 100%;
+         background-color: white;
+         height: 50px;
+         display: flex;
+         justify-content: center;
+        }
+        #nav a:first-child {
+         flex-basis: 30%;
+         text-align: left;
+         margin-left: -50px;
+        }
+      #nav a {
+         letter-spacing: 1px;
+      }
+      #home, #projects, #about, #contact {
+         margin-top: 50px;
+      }
+      #home p {
+         position: relative;
+         top: -110px;
+         left: 17%;
+         text-shadow: 0px 1px 3px;
+         color: black;
+         font-size: larger;
+         letter-spacing: 1px;
+      }
+      #home b {
+         color: white;
+         background-color: black;
+         padding: 5px;
+         box-shadow: 2px 2px 10px grey;
+      }
+      #home img {
+         width: 100%;
+         height: 100%;
+      }
+      span {
+         position: absolute;
+         background-color: white;
+         border: 1px solid;
+      }
+      #projects img {
+         
+         border: 1px solid;
+         width: 100%;
+         height: 100%;
+         margin-bottom: 10px;
+      }
+      #projects, #about, #contact {
+         margin: 20px;
+      }
+      #about img {
+         width: 280px;
+         height: 280px;
+      }
+      #about div {
+         text-align: center;
+         border: 2px solid whitesmoke;
+         margin: 20px;
+      }
+      #about div button {
+         color: green;
+         background-color: rgb(231, 231, 79);
+         border: none;
+         width: 100%;
+      }
+      #about div button:hover {
+         color: white;
+         background-color: black;
+      }
+      input {
+         width: 100%;
+         line-height: 20px;
+         margin-bottom: 20px;
+         border-top: 0;
+         border-left: 0;
+         border-right: 0;
+         border-color: grey;
+         border-width: 1px;
+         opacity: 0.5;
+      }
+      #contact div form button {
+         color: white;
+         background-color: black;
+         border: none;
+         height: 30px;
+      }
+      #contact div form button:hover {
+         color: blue;
+         background-color: powderblue;
+      }
+       
+     }
+    </style>
+</head>
+<body>
+    <div id="nav">
+        <a href="#home"><b>RK</b> Architects</a>
+        <a href="#projects">Projects</a>
+        <a href="#about">About</a>
+        <a href="#contact">Contact</a>
+    </div>
+    <div id="home">
+      <img src="./waverock.jpg">
+      <p><b>RK</b> Architects</p>
+    </div>
+    <hr>
+    <div id="projects">
+      <br><br>
+        <h2>Projects</h2>
+       <div class="projectpics">
+       <span>Amazon</span>
+       <img src="./amazon.jpg">
+       <span>Cyber Towers</span>
+       <img src="./cyber.jpg">
+       <span>Deloiite</span>
+       <img src="./deloitte.jpg">
+       <span>Google</span>
+       <img src="./google.jpg">
+       <span>ICICI Tower</span>
+       <img src="./icici.jpeg">
+       <span>Skyview Towers</span>
+       <img src="./skyview.jpg">
+       <span>T-Hub</span>
+       <img src="./thub.jpg">
+       <span>Waverock</span>
+       <img src="./waverock.jpg">
+       </div>
+    </div>
+    <hr>
+    <div id="about">
+      <br><br>
+      <h2>About</h2>
+       <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+       <div>
+         <img src="./pic3.jpg">
+         <p><b>Alpha</b></p>
+         <p>Chairmen & Founder</p>
+         <button>Contact</button>
+       </div>
+       <div>
+         <img src="./pic1.jpeg">
+         <p><b>Beta</b></p>
+         <p>CEO</p>
+         <button>Contact</button>
+       </div>
+       <div>
+         <img src="./pic4.jpg">
+         <p><b>Gama</b></p>
+         <p>Project Manager</p>
+         <button>Contact</button>
+       </div>
+       <div>
+         <img src="./pic2.jpg">
+         <p><b>Sigma</b></p>
+         <p>Architect</p>
+         <button>Contact</button>
+       </div>
+      </div>
+      <hr>
+      <div id="contact">
+         <br><br>
+         <h2>Contact</h2>
+         <p>Lets get in touch and talk about your next project.</p>
+         <div>
+            <form>
+               <input type="text" placeholder="Name"><br>
+               <input type="email" placeholder="EMail"><br>
+               <input type="text" placeholder="Subject"><br>
+               <input type="text" placeholder="Comment"><br>
+               <button>SEND MESSAGE</button>
+            </form><br>
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3806.8590878442265!2d78.3447034742102!3d17.418548801908603!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bcb94788a76c371%3A0x2b36c49b0dd50801!2sWaveRock%20SEZ!5e0!3m2!1sen!2sin!4v1706719123098!5m2!1sen!2sin" width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+         </div>
+      </div>
+      <div id="footer">
+       <p>Powered by <a href="">RK Architects</a></p>
+      </div>
+</body>
+</html>
